@@ -394,6 +394,11 @@ footer {
   font-size: 5px;
 }
 
+.footer-icons__social-media {
+  width: 30px;
+  height: 30px;
+}
+
 /************* MEDIA AND GRID  *************/
 /* Too lazy to fix sizing. Will come back to this */
 
