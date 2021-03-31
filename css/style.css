@@ -1,0 +1,386 @@
+/* VARIABLES */
+:root {
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  --dark-gray: #423f3f;
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-family: "Public Sans", sans-serif;
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  color: var(--dark-gray);
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 10px;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+p {
+  font-size: 20px;
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 10px;
+  padding: 5px;
+}
+
+/* section {
+  padding: 3rem 0;
+} */
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+/********** HEADER STYLES ***********/
+
+header {
+  width: 100%;
+  height: 7.5rem;
+  padding: 2.5rem 0;
+  background-color: var(--white);
+  position: relative;
+  z-index: 9999999;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
+.nav-ul li {
+  list-style: none;
+  margin: 0 1.5rem;
+}
+
+li a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--dark-gray);
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+li a:hover {
+  color: var(--dark-blue);
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.3rem;
+  background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1.3rem 3rem;
+  background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+  border-radius: 5rem;
+  opacity: 1;
+  transform: scaleX(1);
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transform: scale(1);
+}
+
+.logo {
+  width: 150px;
+}
+
+/********** WELCOME SECTION **********/
+
+.welcome-section {
+  width: 100%;
+  clear: both;
+}
+
+.profile {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  clear: both;
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  clear: both;
+}
+
+/********** ABOUT SECTION   **********/
+.about-section {
+  background-color: var(--light-grayish-blue);
+  padding: 3px;
+}
+
+.about-text {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  font-weight: normal;
+  color: var(--dark-blue);
+  line-height: 4.5rem;
+}
+
+.about-item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  row-gap: 4rem;
+  column-gap: 2rem;
+}
+
+.about-item-box {
+  display: inline-block;
+  text-align: center;
+}
+
+.about-item__icons {
+  width: 80px;
+  padding: 50px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: normal;
+  color: var(--dark-blue);
+  line-height: 4.5rem;
+}
+
+/************* SKILLS SECTION  *************/
+
+.article-section {
+  background-color: var(--very-light-gray);
+}
+
+.article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  row-gap: 4rem;
+  column-gap: 2rem;
+}
+
+.work-section {
+  background: var(--dark-blue);
+}
+
+.work-section__h2 {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+.work-section__p {
+  font-size: 20px;
+  text-align: left;
+  color: white;
+}
+
+.work-section__title {
+  text-align: left;
+}
+
+.article-box {
+  /* background-color: var(--white); */
+  background-origin: 1px solid transparent;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.article-box p {
+  font-size: 15px;
+}
+
+.article-box h2 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.article-box img {
+  width: 100%;
+  height: 23rem;
+}
+
+.article-content {
+  /* padding: 2rem; */
+  text-align: left;
+  color: white;
+}
+
+.article-author {
+  font-size: 1.2rem;
+}
+
+.article-heading {
+  font-size: 1.7rem;
+  font-weight: normal;
+  color: var(--dark-blue);
+}
+
+.article-excerpt {
+  font-size: 1.3rem;
+}
+
+/************* PORTFOLIO SECTION  *************/
+
+.portfolio-section {
+  background-color: var(--light-grayish-blue);
+  padding: 3px;
+}
+
+.portfolio__links {
+  padding-left: 14px;
+  font-size: 14px;
+  color: blue;
+  text-decoration: none;
+}
+
+.portfolio-section__h2 {
+  text-align: center;
+  font-size: 35px;
+  color: var(--dark-gray);
+}
+
+/************* FOOTER SECTION  *************/
+
+footer {
+  padding: 5rem 0;
+  background-color: var(--dark-blue);
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  row-gap: 4rem;
+  column-gap: 2rem;
+}
+
+.footer-icons a {
+  padding-right: 1rem;
+}
+
+.footer-links ul li {
+  list-style: none;
+  padding-bottom: 1.5rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.footer-links ul li a {
+  color: white;
+}
+
+.footer-links ul li a:hover {
+  color: var(--lime-green);
+}
+
+.footer-credit {
+  color: white;
+  font-size: 5px;
+}
+
+/************* MEDIA AND GRID  *************/
+/* Too lazy to fix sizing. Will come back to this */
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 20px;
+  /*  grid-template-rows: 300px 300px; */
+}
+
+.grid__item {
+  background-color: lightgray;
+  padding: 0px 10px 20px 20px;
+}
