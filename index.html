@@ -34,7 +34,7 @@
     <div class="profile">
       <img src="img/jim.jpg" alt="Jim Medios" class="profile__portrait">
       <h1>Hello, my name's Jim.</h1>
-      <p>I'm a <span>full stack web developer</span> from the Bay Area. I love designing and developing things that are both functional and aesthetically pleasing. You've gotta have both right?</p><br>
+      <p>I'm a full stack web developer from the Bay Area. I love designing and developing things that are both functional and aesthetically pleasing. You've gotta have both right?</p><br>
       <a href="/files/Jim_Medios-Resume.pdf" class="btn">Download resume</a>
   </div>
   </section> 
@@ -185,6 +185,44 @@
     </div>
   </section>
 
+  <!-- CONTACT FORM SECTION -->
+  <section class="contact-section" id="contact-section">
+    
+    <div class="contact__container">
+      <div class="contact-info">
+          <h2>Contact Info </h2><br />
+          <p>jmedios@gmail.com<br />
+          408-726-3649</p>
+      </div>
+      <div class="contact">
+          <form>
+              <span class="inputbox">
+                  <input type="text" required />
+                  <span class="inputname">First Name</span>
+              </span>
+              <span class="inputbox">
+                  <input type="text" required />
+                  <span class="inputname">Last Name</span>
+              </span>
+              <span class="inputbox">
+                  <input type="email" required />
+                  <span class="inputname">Email Address</span>
+              </span>
+              <span class="inputbox">
+                  <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required />
+                  <span class="inputname">Contact Number</span>
+              </span><br /><br /><br /><br /><br /><br />
+              <span class="inputbox">
+                  <textarea required></textarea>
+                  <span class="inputname">Write your message here</span> </span><br />
+              <input type="submit" class="btn" />
+          </form>
+      </div>
+  </div>
+
+  
+  </section>
+
 
 
   <footer>
@@ -207,15 +245,15 @@
 
         <div class="footer-links">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
+            <li><a href="#welcome-section">Home</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#work-section">Work</a></li>
           </ul>
         </div>
 
         <div class="footer-links">
           <ul>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact-section">Contact</a></li>
             <li><a href="#">Placeholder link 1</a></li>
             <li><a href="#">Placeholder link 2</a></li>
           </ul>
@@ -223,7 +261,7 @@
 
         <div class="">
           <div class="">
-            <a href="#" class="btn">Contact me</a>
+            <a href="mailto:jmedios@gmail.com" class="btn">Contact me</a>
           </div>
           <!-- <div class="footer-credit">
             <p>© Jim Medios. All Rights Reserved</p>
